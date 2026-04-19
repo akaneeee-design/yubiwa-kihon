@@ -1,0 +1,10 @@
+name = "yubiwa-kihon"
+compatibility_date = "2024-01-01"
+
+[build]
+command = "hugo --minify"
+cwd = "."
+
+[[build.environment_variables]]
+name = "HUGO_VERSION"
+value = "0.160.1"

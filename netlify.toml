@@ -1,0 +1,9 @@
+# Cloudflare Pages は netlify.toml も参照できます
+# ただし CF Pages は通常ダッシュボードで設定するので、これは参考用
+[build]
+  command = "hugo --minify"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.160.1"
+  HUGO_ENV = "production"

@@ -1,0 +1,62 @@
+baseURL = "https://yubiwa-kihon.com/"
+languageCode = "ja"
+title = "指輪のきほん"
+theme = "PaperMod"
+defaultContentLanguage = "ja"
+hasCJKLanguage = true
+paginate = 10
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+
+[params]
+  author = "指輪のきほん"
+  description = "婚約指輪・結婚指輪の基礎知識から選び方まで。大切な指輪選びを、丁寧にサポートします。"
+  defaultTheme = "light"
+  disableThemeToggle = true
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowFullTextinRSS = true
+  ShowToc = true
+  TocOpen = false
+  comments = false
+
+  [params.homeInfoParams]
+    Title = "指輪のきほん"
+    Content = "婚約指輪・結婚指輪のすべてを、ていねいに。\nダイヤモンドの選び方、素材の違い、相場とブランドまで——大切な指輪選びに役立つ情報をお届けします。"
+
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "このサイトについて"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    identifier = "categories"
+    name = "カテゴリー"
+    url = "/categories/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "タグ"
+    url = "/tags/"
+    weight = 30
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style = "github"
