@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "hugo-server",
+      "name": "yubiwa-kihon",
       "runtimeExecutable": "/Users/wasakiakane/bin/hugo",
-      "runtimeArgs": ["server", "--buildDrafts", "--port", "1313"],
-      "port": 1313
+      "runtimeArgs": ["server", "--buildDrafts", "--port", "1414", "--bind", "127.0.0.1"],
+      "port": 1414
     }
   ]
 }

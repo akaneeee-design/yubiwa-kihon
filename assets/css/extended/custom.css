@@ -1,138 +1,223 @@
 /* =============================================
-   指輪のきほん — カスタムスタイル
-   コンセプト: 上品・洗練・信頼感のあるブライダル系
+   指輪のきほん — カスタムスタイル v2
+   コンセプト: 上品・洗練・信頼感 / 専門メディア感
    ============================================= */
 
-/* Google Fonts: Cormorant Garamond（見出し用エレガントセリフ） + Noto Sans JP（本文） */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
 
 /* ── カラーパレット ── */
 :root {
-  --color-ivory: #faf8f5;
-  --color-cream: #f5f0ea;
-  --color-champagne: #e8d5b7;
-  --color-rose-gold: #b5836a;
-  --color-rose-gold-light: #c99b81;
-  --color-rose-gold-dark: #8d5f4a;
-  --color-charcoal: #3a3535;
-  --color-gray-mid: #7a7270;
-  --color-gray-light: #ccc4bc;
-  --color-border: #e8e0d8;
-  --color-accent-bg: #fdf5ef;
+  --color-ivory:          #faf8f5;
+  --color-cream:          #f4efe8;
+  --color-cream-deep:     #ede5d8;
+  --color-champagne:      #e2cdb0;
+  --color-rose-gold:      #ad7a5f;
+  --color-rose-gold-light:#c4967a;
+  --color-rose-gold-dark: #86573f;
+  --color-charcoal:       #2e2a27;
+  --color-charcoal-mid:   #4a4440;
+  --color-gray-mid:       #7a7068;
+  --color-gray-light:     #bbb2a8;
+  --color-border:         #e4dbd0;
+  --color-border-light:   #eee8e0;
+  --color-accent-bg:      #fdf7f2;
+  --color-white:          #ffffff;
 }
 
-/* ── ベース ── */
+/* ── リセット＆ベース ── */
+*, *::before, *::after { box-sizing: border-box; }
+
 body {
   background-color: var(--color-ivory);
   color: var(--color-charcoal);
-  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
   font-weight: 300;
-  letter-spacing: 0.03em;
-  line-height: 1.9;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  line-height: 1.95;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* ── 見出し ── */
-h1, h2, h3, h4 {
-  font-family: 'Cormorant Garamond', 'Hiragino Mincho ProN', '游明朝', serif;
+/* ── 見出し共通 ── */
+h1, h2, h3, h4, h5 {
+  font-family: 'Cormorant Garamond', 'EB Garamond', 'Hiragino Mincho ProN', '游明朝', 'Yu Mincho', serif;
   font-weight: 400;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
   color: var(--color-charcoal);
+  line-height: 1.45;
 }
 
 /* ── ヘッダー ── */
 header.header {
-  background-color: rgba(250, 248, 245, 0.96);
+  background-color: var(--color-white);
   border-bottom: 1px solid var(--color-border);
-  backdrop-filter: blur(8px);
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 12px rgba(46, 42, 39, 0.05);
+}
+
+/* ── ロゴ ── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .logo a {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   color: var(--color-charcoal) !important;
+  text-decoration: none !important;
+  position: relative;
 }
 
-/* サイトタイトルの下に細いゴールドライン */
+/* ロゴ下の細いゴールドライン */
 .logo a::after {
   content: '';
   display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--color-rose-gold), transparent);
-  margin-top: 3px;
-  opacity: 0.6;
+  background: linear-gradient(90deg, var(--color-rose-gold) 0%, var(--color-champagne) 60%, transparent 100%);
+  opacity: 0.7;
 }
 
 /* ── ナビゲーション ── */
 nav.nav a {
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
   color: var(--color-gray-mid);
   font-weight: 400;
+  padding: 0.3rem 0;
+  transition: color 0.2s;
 }
 
 nav.nav a:hover {
   color: var(--color-rose-gold);
 }
 
-/* ── ホームページ・ヒーロー ── */
+/* ── ヒーローセクション ── */
 .home-info {
   text-align: center;
-  padding: 3rem 1rem 2rem;
+  padding: 4.5rem 1.5rem 3.5rem;
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-ivory) 100%);
   border-bottom: 1px solid var(--color-border);
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 背景の装飾円 */
+.home-info::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(181, 131, 106, 0.06) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .home-info h1 {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
   font-weight: 300;
   color: var(--color-charcoal);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.15em;
 }
 
-/* ヒーローの装飾ライン */
+/* ヒーロー装飾 */
 .home-info h1::before {
-  content: '— ';
+  content: '✦ ';
+  font-size: 0.65em;
   color: var(--color-rose-gold);
-  opacity: 0.7;
+  opacity: 0.8;
+  vertical-align: middle;
 }
 
 .home-info h1::after {
-  content: ' —';
+  content: ' ✦';
+  font-size: 0.65em;
   color: var(--color-rose-gold);
-  opacity: 0.7;
+  opacity: 0.8;
+  vertical-align: middle;
 }
 
 .home-info p {
   color: var(--color-gray-mid);
-  font-size: 0.9rem;
-  line-height: 1.9;
-  max-width: 500px;
+  font-size: 0.88rem;
+  line-height: 2.0;
+  max-width: 460px;
   margin: 0 auto;
+  font-weight: 300;
 }
 
-/* ── 記事一覧 ── */
+/* ヒーロー下のゴールドセパレーター */
+.home-info::after {
+  content: '— ✦ —';
+  display: block;
+  margin-top: 2rem;
+  color: var(--color-rose-gold);
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  opacity: 0.6;
+}
+
+/* ── 記事一覧エリア ── */
+.posts-grid {
+  padding-top: 2.5rem;
+}
+
 .post-entry {
-  background: #fff;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  padding: 1.5rem 1.8rem;
-  margin-bottom: 1rem;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  background: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: 2px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* 左のアクセントライン */
+.post-entry::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, transparent, var(--color-rose-gold), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .post-entry:hover {
-  border-color: var(--color-rose-gold-light);
-  box-shadow: 0 2px 16px rgba(181, 131, 106, 0.1);
+  border-color: var(--color-border);
+  box-shadow: 0 4px 24px rgba(46, 42, 39, 0.07);
+  transform: translateX(3px);
+}
+
+.post-entry:hover::before {
+  opacity: 1;
 }
 
 .post-entry .entry-header h2 {
-  font-size: 1.15rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.0rem;
   color: var(--color-charcoal);
   font-weight: 400;
   letter-spacing: 0.04em;
+  line-height: 1.65;
+  margin-bottom: 0.5rem;
 }
 
 .post-entry:hover .entry-header h2 {
@@ -141,166 +226,319 @@ nav.nav a:hover {
 
 .post-meta {
   color: var(--color-gray-light);
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
 }
 
 .entry-content p {
   color: var(--color-gray-mid);
-  font-size: 0.88rem;
+  font-size: 0.85rem;
+  line-height: 1.8;
+  margin-top: 0.5rem;
+}
+
+/* カテゴリラベル */
+.entry-isdraft,
+.post-entry .post-tags {
+  margin-top: 0.75rem;
 }
 
 /* ── 記事本文 ── */
+.post-header {
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
 .post-title {
-  font-family: 'Cormorant Garamond', '游明朝', serif;
-  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-family: 'Cormorant Garamond', 'EB Garamond', '游明朝', serif;
+  font-size: clamp(1.55rem, 3.5vw, 2.1rem);
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   color: var(--color-charcoal);
-  border-bottom: 1px solid var(--color-border);
-  padding-bottom: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-content {
+  font-size: 0.95rem;
+  line-height: 2.05;
+  color: var(--color-charcoal-mid);
+}
+
+.post-content > p:first-of-type {
+  font-size: 1.0rem;
+  color: var(--color-charcoal);
+  font-weight: 400;
 }
 
 .post-content h2 {
-  font-size: 1.3rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
   border-left: 3px solid var(--color-rose-gold);
-  padding-left: 0.75rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  padding-left: 0.9rem;
+  margin-top: 3rem;
+  margin-bottom: 1.2rem;
   color: var(--color-charcoal);
+  letter-spacing: 0.04em;
 }
 
 .post-content h3 {
-  font-size: 1.1rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.98rem;
+  font-weight: 500;
   color: var(--color-rose-gold-dark);
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
+  margin-top: 2.2rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.04em;
 }
 
-.post-content p {
-  font-size: 0.95rem;
-  line-height: 2.0;
-  color: #4a4545;
+.post-content hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2.5rem 0;
 }
 
 .post-content a {
   color: var(--color-rose-gold);
   text-decoration: underline;
   text-underline-offset: 3px;
+  text-decoration-color: rgba(173, 122, 95, 0.4);
+  transition: text-decoration-color 0.2s;
 }
 
 .post-content a:hover {
   color: var(--color-rose-gold-dark);
+  text-decoration-color: var(--color-rose-gold-dark);
 }
 
 /* 引用 */
 .post-content blockquote {
-  border-left: 3px solid var(--color-champagne);
+  border-left: 2px solid var(--color-champagne);
   background: var(--color-accent-bg);
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  font-style: italic;
+  padding: 1.2rem 1.6rem;
+  margin: 2rem 0;
   color: var(--color-gray-mid);
+  font-style: italic;
+  border-radius: 0 2px 2px 0;
 }
 
 /* テーブル */
 .post-content table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
+  margin: 1.5rem 0;
 }
 
 .post-content th {
   background: var(--color-cream);
   color: var(--color-charcoal);
   font-weight: 500;
-  padding: 0.6rem 1rem;
+  padding: 0.65rem 1.1rem;
   border: 1px solid var(--color-border);
+  text-align: left;
+  font-family: 'Noto Sans JP', sans-serif;
+  letter-spacing: 0.04em;
 }
 
 .post-content td {
-  padding: 0.55rem 1rem;
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--color-border-light);
+  color: var(--color-charcoal-mid);
+  vertical-align: top;
+}
+
+.post-content tr:nth-child(even) td {
+  background: rgba(244, 239, 232, 0.4);
+}
+
+/* ── プロフィール・著者欄 ── */
+.post-author {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  background: var(--color-cream);
   border: 1px solid var(--color-border);
-  color: #4a4545;
+  border-radius: 2px;
+  padding: 1.4rem 1.6rem;
+  margin-top: 3rem;
+}
+
+.post-author-info strong {
+  font-size: 0.85rem;
+  color: var(--color-charcoal);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.post-author-info p {
+  font-size: 0.8rem;
+  color: var(--color-gray-mid);
+  line-height: 1.7;
+  margin: 0;
 }
 
 /* ── パンくず ── */
 .breadcrumbs {
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: var(--color-gray-light);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
 }
 
 .breadcrumbs a {
   color: var(--color-rose-gold);
 }
 
-/* ── タグ・カテゴリー ── */
-.post-tags a {
-  background: var(--color-cream);
-  color: var(--color-gray-mid);
-  border: 1px solid var(--color-border);
-  border-radius: 2px;
-  padding: 0.2rem 0.6rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.05em;
-  transition: all 0.2s;
+.breadcrumbs span.separator {
+  margin: 0 0.4rem;
+  color: var(--color-border);
 }
 
-.post-tags a:hover {
+/* ── タグ ── */
+.post-tags a,
+.terms-tags li a {
+  display: inline-block;
+  background: transparent;
+  color: var(--color-gray-mid);
+  border: 1px solid var(--color-border);
+  border-radius: 1px;
+  padding: 0.18rem 0.65rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  transition: all 0.2s;
+  text-decoration: none !important;
+}
+
+.post-tags a:hover,
+.terms-tags li a:hover {
   background: var(--color-rose-gold);
-  color: #fff;
+  color: var(--color-white);
   border-color: var(--color-rose-gold);
+}
+
+/* ── TOC ── */
+.toc {
+  background: var(--color-cream);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  padding: 1.4rem 1.8rem;
+  font-size: 0.83rem;
+  margin-bottom: 2rem;
+}
+
+.toc-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  color: var(--color-charcoal);
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.toc ul {
+  padding-left: 1.2rem;
+}
+
+.toc li {
+  margin: 0.3rem 0;
+  color: var(--color-gray-mid);
+}
+
+.toc a {
+  color: var(--color-gray-mid);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.toc a:hover {
+  color: var(--color-rose-gold);
 }
 
 /* ── フッター ── */
 footer.footer {
   border-top: 1px solid var(--color-border);
+  background: var(--color-white);
   color: var(--color-gray-light);
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
-  padding: 1.5rem 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  padding: 2rem 0;
   text-align: center;
 }
 
 footer.footer a {
+  color: var(--color-rose-gold-light);
+  text-decoration: none;
+}
+
+/* フッター上の装飾 */
+footer.footer::before {
+  content: '— ✦ —';
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--color-champagne);
+  font-size: 0.65rem;
+  letter-spacing: 0.5em;
+}
+
+/* ── メインコンテナ ── */
+.main {
+  max-width: 800px;
+  padding: 0 1.5rem;
+}
+
+.post-single .main {
+  max-width: 740px;
+}
+
+/* ── 記事前後ナビ ── */
+.paginav {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+}
+
+.paginav a {
+  color: var(--color-charcoal);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.paginav a:hover {
   color: var(--color-rose-gold);
 }
 
-/* ── TOC（目次） ── */
-.toc {
-  background: var(--color-cream);
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  padding: 1.2rem 1.5rem;
-  font-size: 0.85rem;
+.paginav-title {
+  font-size: 0.7rem;
+  color: var(--color-gray-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.toc-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
-  letter-spacing: 0.08em;
+/* ── スクロールバー ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-ivory); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+
+/* ── 選択テキスト ── */
+::selection {
+  background: rgba(173, 122, 95, 0.15);
   color: var(--color-charcoal);
 }
 
-/* ── ページネーション ── */
-.pagination .page-item .page-link {
-  color: var(--color-rose-gold);
-  border-color: var(--color-border);
-}
-
-/* ── レスポンシブ微調整 ── */
-.main {
-  max-width: 780px;
-}
-
+/* ── レスポンシブ ── */
 @media (max-width: 768px) {
-  .logo a {
-    font-size: 1.1rem;
-  }
-  .post-title {
-    font-size: 1.4rem;
-  }
+  body { font-size: 14px; }
+
+  .logo a { font-size: 1.1rem; letter-spacing: 0.1em; }
+
+  .home-info { padding: 3rem 1rem 2.5rem; }
+
+  .post-title { font-size: 1.35rem; }
+
+  .post-entry { padding: 1.3rem 1.4rem; }
+
+  .post-content h2 { font-size: 1.05rem; }
 }
