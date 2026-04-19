@@ -3,7 +3,8 @@
    コンセプト: 上品・洗練・信頼感 / 専門メディア感
    ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+/* ith・BRILLIANCE+スタイル: Zen Serif × Noto Sans JP */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 
 /* ── カラーパレット ── */
 :root {
@@ -40,11 +41,11 @@ body {
 
 /* ── 見出し共通 ── */
 h1, h2, h3, h4, h5 {
-  font-family: 'Cormorant Garamond', 'EB Garamond', 'Hiragino Mincho ProN', '游明朝', 'Yu Mincho', serif;
+  font-family: 'Zen Old Mincho', 'Hiragino Mincho ProN', '游明朝', serif;
   font-weight: 400;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.08em;
   color: var(--color-charcoal);
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 /* ── ヘッダー ── */
@@ -66,10 +67,10 @@ header.header {
 }
 
 .logo a {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
+  font-family: 'Zen Old Mincho', 'Hiragino Mincho ProN', serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
   color: var(--color-charcoal) !important;
   text-decoration: none !important;
   position: relative;
@@ -128,11 +129,12 @@ nav.nav a:hover {
 }
 
 .home-info h1 {
-  font-size: clamp(1.6rem, 4vw, 2.6rem);
-  font-weight: 300;
+  font-family: 'Zen Old Mincho', serif;
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+  font-weight: 400;
   color: var(--color-charcoal);
   margin-bottom: 1rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
 }
 
 /* ヒーロー装飾 */
@@ -251,13 +253,33 @@ nav.nav a:hover {
 }
 
 .post-title {
-  font-family: 'Cormorant Garamond', 'EB Garamond', '游明朝', serif;
-  font-size: clamp(1.55rem, 3.5vw, 2.1rem);
+  font-family: 'Zen Old Mincho', '游明朝', serif;
+  font-size: clamp(1.45rem, 3.2vw, 1.95rem);
   font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.06em;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
   color: var(--color-charcoal);
   margin-bottom: 1rem;
+}
+
+/* カバー画像を美しく */
+.post-cover img,
+.entry-cover img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* 記事内画像 */
+.post-content img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 2px;
+  margin: 2rem 0;
+  display: block;
 }
 
 .post-content {

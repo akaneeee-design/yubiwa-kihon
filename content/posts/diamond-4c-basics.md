@@ -4,6 +4,10 @@ date: 2026-04-19
 description: "婚約指輪のダイヤモンドを選ぶ際に必ず耳にする「4C」。Cut・Color・Clarity・Caratの4つの要素をわかりやすく解説します。"
 categories: ["ダイヤモンド"]
 tags: ["4C", "婚約指輪", "ダイヤモンド", "基礎知識"]
+cover:
+  image: "https://images.unsplash.com/photo-1584302179602-e4c3d3fd629d?auto=format&fit=crop&w=1200&q=80"
+  alt: "ダイヤモンドの婚約指輪"
+  relative: false
 ---
 
 婚約指輪を選びに行くと、必ずといっていいほど「4C」という言葉が登場します。  
@@ -21,6 +25,8 @@ tags: ["4C", "婚約指輪", "ダイヤモンド", "基礎知識"]
 | カラット | Carat | 重量（大きさの目安） |
 
 ---
+
+![ダイヤモンドリングのクローズアップ](https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=900&q=80)
 
 ## Cut（カット）— 輝きを決める
 
