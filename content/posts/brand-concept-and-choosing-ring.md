@@ -5,8 +5,8 @@ description: "婚約指輪・結婚指輪のブランドをいくつも見てき
 categories: ["指輪の選び方"]
 tags: ["ブランド", "コンセプト", "婚約指輪", "結婚指輪", "選び方"]
 cover:
-  image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80"
-  alt: "上品なジュエリーショールームの空間"
+  image: "/images/30194.jpg"
+  alt: "ゴールドの結婚指輪"
   relative: false
 ---
 
@@ -16,7 +16,7 @@ cover:
 
 ## ブランドごとに、まるで「世界観」が違う
 
-![ジュエリーショールームの上品な空間](https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80)
+![ふたつの指輪](/images/3010.jpg)
 
 あるブランドに入った瞬間、空間全体がひとつのストーリーを語っていると感じました。照明の色温度、什器の素材感、スタッフの言葉の選び方——すべてがそのブランドのコンセプトと一致している。
 

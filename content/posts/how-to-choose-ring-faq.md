@@ -5,8 +5,8 @@ description: "指輪の販売をしていて、一番多く受ける相談がこ
 categories: ["指輪の選び方"]
 tags: ["選び方", "基準", "婚約指輪", "結婚指輪", "初めて"]
 cover:
-  image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1200&q=80"
-  alt: "指輪のクローズアップ"
+  image: "/images/28318.jpg"
+  alt: "婚約指輪のダイヤモンド"
   relative: false
 ---
 
@@ -44,7 +44,7 @@ cover:
 
 ---
 
-![指輪を選ぶ場面](https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80)
+![プラチナの結婚指輪](/images/3010.jpg)
 
 ## Q. ダイヤモンドの何を見ればいいですか？
 

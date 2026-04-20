@@ -5,7 +5,7 @@ description: "婚約指輪のダイヤモンドを選ぶ際に必ず耳にする
 categories: ["ダイヤモンド"]
 tags: ["4C", "婚約指輪", "ダイヤモンド", "基礎知識"]
 cover:
-  image: "https://images.unsplash.com/photo-1584302179602-e4c3d3fd629d?auto=format&fit=crop&w=1200&q=80"
+  image: "/images/28318.jpg"
   alt: "ダイヤモンドの婚約指輪"
   relative: false
 ---
@@ -26,7 +26,7 @@ cover:
 
 ---
 
-![ダイヤモンドリングのクローズアップ](https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=900&q=80)
+![ダイヤモンドリングのクローズアップ](/images/3010.jpg)
 
 ## Cut（カット）— 輝きを決める
 
